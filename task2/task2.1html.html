@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<title>task2</title>
+		<style type = "text/css">
+			table tr td,th{
+				border: 1px solid #000
+			}
+			a:hover{	/*伪选择符*/
+				color:red;
+				font-size: 20px;
+				font-style: italic;
+			}
+			.first,span{
+				color:blue;
+				font-family: "Microsoft Yahei";
+			}
+			p>span{color:pink;}
+			.stress{
+				font-size:15px;
+				font-family: "Times New Roman";
+				font-weight: bold;
+			}
+			.decoration{
+				text-indent: 2em;
+				text-decoration: line-through;
+				line-height: 1.2em;
+				/* letter/word -spacing 可以设置*/
+			}
+			div{
+				padding:10px;
+				border:20px solid gray;
+			}
+			.box{
+				width:430px;
+				padding:10px;
+				margin:10px;
+				border: 2px solid pink;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id ="主题">
+			<h1 class="first">SweetMango's site</h1>
+			<ul>
+				<li><a href="http://weibo.com/p/1005052169200734/home?from=page_100505&mod=TAB&is_all=1#_rnd1459820018027" target="_blank">新浪微博</a></li>
+				<li><a href="https://www.facebook.com/profile.php?id=100010815076691" target="_blank">Facebook</a></li>
+				<li><a href="https://www.zhihu.com/question/24533374" target="_blank">知乎</a></li>
+				<li><a href="https://twitter.com/xiaoyu_paopao" target="_blank">Twitter</a></li>
+				<li><a href="https://github.com/xiaoshengyuan/IFE" target="_blank">Github</a></li>
+			</ul>
+		</div><br>
+
+		<div id="Part1">
+		<h3><a href="https://segmentfault.com/a/1190000004468442">一、事务的四个特征</a></h3>
+			<p>引用 <em>2016-04-05</em></p>
+				<p class="stress">1、<span>A</span>tomic&nbsp;&nbsp;原子性<br>事务必须是一个原子的操作序列单元，事务中包含的各项操作在一次执行过程中，要么全部执行成功，要么全部不执行，任何一项失败，整个事务回滚，只有全部都执行成功，整个事务才算成功。</p>
+				<p>2、<span>C</span>onsistency&nbsp;&nbsp;一致性<br>事物的执行不能破坏数据库数据的完整性和一致性，事务在执行之前和之后，数据库都必须处于一致性状态</p>
+				<p>3、<span>I</span>solation&nbsp;&nbsp;隔离性<br>在并发环境中，并发的事务是相互隔离的，一个事务的执行不能被其他事务干扰。即不同的事务并发操纵相同的数据时，每个事务都有各自完整的数据空间，即一个事务内部的操作及使用的数据对其他并发事务是隔离的，并发执行的各个事务之间不能相互干扰。</p>
+				<p>4、<span>D</span>urability&nbsp;&nbsp;持久性<br>一个事务一旦提交，它对数据库中对应数据的状态变更就应该是永久性的，即使发生系统崩溃或机器宕机，只要数据库能够重新启动，那么一定能够将其恢复到事务成功结束时的状态。</p>
+		<hr/>
+
+		<h3>文章二级标题</h3>
+			<p class="first">文章作者  文章发表时间 </p>
+			<p>文章内容</p>
+				<img src="http://ww4.sinaimg.cn/mw690/814b605ejw1erdfml5btuj20c80c8wf2.jpg">
+		</div><br>		
+	
+	<div id="Part2">
+		<h3><a href="https://leetcode.com/">二&nbsp;&nbsp;LeetCode</a></h3>
+		<h3><em>292</em></h3>
+	<pre>
+	public class Solution {
+	   public boolean canWinNim(int n) {
+	      if(n <= 0)
+	         throw new IllegalArgumentException();
+	      return !(n % 4 == 0);
+	   }
+	}
+	</pre>
+		<img src="http://ww4.sinaimg.cn/mw1024/814b605ejw1erdfmj2g0tj20c80c8q3j.jpg">
+		<ul>
+			<li>列表项目一</li>
+			<li>列表项目二</li>
+			<li>列表项目三</li>
+		</ul>
+		<h2>图片</h2>
+			<div class="box">
+				<p>好看的图片</p>
+				<img src="http://ww2.sinaimg.cn/mw690/9f26e35dgw1epj7ltuzz0j20c00jywh2.jpg" alt="红豆制作美食" title="陈皮红豆沙"></div>
+			<div class="box">	
+				<p> 好看的图片</p>
+				<img src="http://ww4.sinaimg.cn/mw690/9f26e35dgw1epj7lv0dngj20c40h6jtq.jpg" title="陈皮红豆小圆子"></div>
+			<div class="box">	
+				<p>好看的图片</p>
+				<img  ="box" src="http://ww3.sinaimg.cn/mw690/9f26e35dgw1epj7ly6gnmj20c30h60v5.jpg"></div>
+	</div><br>
+
+	<div id="Part3">
+		<h2>最后一篇文章一级标题</h2>
+		<h3>文章二级标题</h3>
+			<p>文章作者  文章发表时间 </p>
+				<ol>
+					<li>排名1</li>
+					<li>排名2</li>
+					<li>排名3</li>
+				</ol>
+			<p>添加表格</p>
+			<table summary="想要购买的图书">
+			<caption>Books</caption>
+				<tbody>
+					<tr>
+						<td>图书</td>
+						<td>单价</td>
+						<td>折扣</td>
+					</tr>
+					<tr>
+						<td><a href="http://item.jd.com/11397776.html" target="_blank">Linux从入门到精通</a></td>
+						<td>52.1RMB</td>
+						<td>8.8折</td>
+					</tr>
+					<tr>
+						<td><a href="http://item.jd.com/11056660.html" target="_blank">数据挖掘 概念与技术（原书第3版）</a></td>
+						<td>66.1RMB</td>
+						<td>8.4折</td>
+					</tr>
+					<tr>
+						<td>总计</td>
+						<td colspan="2">118.2RMB</td>
+					</tr>
+				</tbody>
+			</table>	
+
+				<img src="http://ww2.sinaimg.cn/large/814b605ejw1erdfmlo021j20c80c8gm0.jpg">
+	</div>	
+	<a href="mailto:iewangjianyu@163.com?subject=对该网站的一些建议&body=您好，以下是我认为您需要改进的地方：">	对该网站有何建议，发邮件给我，谢谢</a>	
+	<address>College of Computer Science, Zhejiang University ,38 Zheda Road, Hangzhou 310027, P. R. China</address><br>
+
+	<div id="侧栏">
+		<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
+		<p>侧栏注册窗口标题</p>
+		<form method="post" action="save.php">
+			<label for="邮箱地址">请输入邮箱地址：</label>
+				<input type="text" name="邮箱地址"></input><br>
+				按照邮箱格式输入<br>
+			<label for="password">请输入密码：</label>
+				<input type="text" name="password"></input>
+			<label for="password again">请重复输入密码：</label>
+				<input type="text" name="password again"></input><br>
+				6-16位英文数字<br>
+			<label for="性别">性别：</label>
+				<label for="female">男</label>
+				<input type="radio" value="1"  name="gender" id="male" checked="checked"/>
+				<label>女</label>
+				<input type="radio" value="2"  name="gender" />
+			<label for="城市">城市：</label>
+				<select>
+					<option value="北京" selected="selected">北京</option>
+					<option value="上海">上海</option>
+					<option value="杭州">杭州</option>
+					<option value="其他">其他</option>
+				</select>	
+			<label for="爱好">爱好：</label>	
+				<label>运动</label>
+				<input type="checkbox" name="hobby" value="运动" checked="checked">
+				<label>艺术</label>
+				<input type="checkbox" name="hobby" value="艺术" >
+				<label>科学</label>
+				<input type="checkbox" name="hobby" value="科学" >
+			<label for="个人描述">个人描述:</label>
+				<textarea cols="25" rows="3">这是一个多行输入框，输入您的描述：</textarea>
+				<input type="submit" value="确认提交" name="submitBtn" />
+				<input type="reset" value="重置">
+		</form>	
+	</div>
+	</body>
+</html>
